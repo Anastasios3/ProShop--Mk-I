@@ -6,57 +6,55 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #fffbf0 25%, #dcdcdc 100%);
-  border-radius: 0;
-  box-shadow: 0 0 0 #000, 0 0 10px #333;
-  animation: fadeIn 1s ease-in-out;
+  background: #f4f4f4;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Product Card Styling */
+.product-card {
+  margin-bottom: 2rem; /* Adds vertical spacing between the product cards */
 }
 
 /* Rating Stars */
 .rating {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
 }
 
 .rating span {
   margin: 0.1rem;
   font-size: 1.5rem;
+  color: #a9a9a9; /* Dark grey */
   transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-  color: #333;
 }
 
 .rating span:hover {
-  transform: scale(1.3);
-  color: #ffcc00;
+  transform: scale(1.1);
+  color: #ffc107; /* Golden color */
 }
 
 .rating svg {
-  color: #333;
-  filter: none;
-  transition: color 0.3s ease;
+  color: #a9a9a9; /* Dark grey */
 }
 
 .rating svg:hover {
-  color: #ffcc00;
+  color: #ffc107; /* Golden color */
 }
 
 /* Rating Text */
 .rating-text {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.8rem; /* Smaller font size */
+  font-weight: 300; /* Light font weight */
   padding-left: 0.5rem;
-  color: #000;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+  transition: none; /* Disable any transition effect */
+}
+
+.rating-text:hover {
+  color: #333; /* No color change */
+  transform: none; /* No scaling */
 }
 
 /* Product Title */
@@ -65,17 +63,15 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #000;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  text-transform: uppercase;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .product-title:hover {
-  color: #ff0000;
+  color: #004e0a;
   cursor: pointer;
-  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000;
 }
 
 /* Table Styling */
@@ -83,30 +79,25 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 2rem;
-  box-shadow: 4px 4px 0 #000, 8px 8px 0 #333;
-  border: 2px solid #000;
-  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 table th,
 table td {
   text-align: center;
   padding: 1rem;
-  border: 1px solid #000;
+  border: 1px solid #ddd;
   background: #fff;
-  transition: background 0.3s ease, color 0.3s ease;
-  text-transform: uppercase;
+  transition: background 0.3s ease;
 }
 
 table th {
-  background: #fffbf0;
+  background: #f4f4f4;
   font-weight: 700;
-  border-bottom: 4px solid #000;
 }
 
 table td:hover {
-  background: #ffcc00;
-  color: #000;
+  background: #f8f8f8;
 }
 
 /* Review Section */
@@ -114,22 +105,17 @@ table td:hover {
   margin-top: 2rem;
   padding: 2rem;
   background: #fff;
-  border: 2px solid #000;
-  box-shadow: 4px 4px 0 #000, 8px 8px 0 #333;
-  transition: box-shadow 0.3s ease;
-}
-
-.review:hover {
-  box-shadow: 8px 8px 0 #000, 16px 16px 0 #333;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .review h2 {
-  font-size: 1.7rem;
-  background: #fffbf0;
+  font-size: 1.5rem;
+  background: #f4f4f4;
   padding: 1rem;
-  border: 2px solid #000;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
 }
 
 .review button {
@@ -137,16 +123,15 @@ table td:hover {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: #fff;
-  background: #000;
-  border: 2px solid #000;
+  background: #007bff;
+  border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
+  transition: background 0.3s ease;
 }
 
 .review button:hover {
-  background: #ff0000;
-  transform: scale(1.05);
+  background: #0056b3;
 }
 
 /* Carousel Caption */
@@ -156,16 +141,16 @@ table td:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
-  font-size: 1.3rem;
-  border-top: 4px solid #000;
-  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 1.2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transition: background 0.3s ease;
 }
 
 .carousel-caption:hover {
-  background: rgba(0, 0, 0, 1);
-  transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.85);
 }
