@@ -8,33 +8,51 @@ main {
   align-items: center;
   background: linear-gradient(135deg, #f4f4f4 25%, #e2e2e2 100%);
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Rating Stars */
 .rating {
   display: flex;
   align-items: center;
+  gap: 0.2rem;
 }
 
 .rating span {
   margin: 0.1rem;
   font-size: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .rating span:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  color: #ffc107;
 }
 
 .rating svg {
   color: #f8e825;
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+  transition: color 0.3s ease;
+}
+
+.rating svg:hover {
+  color: #ffc107;
 }
 
 /* Rating Text */
 .rating-text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   padding-left: 0.5rem;
   color: #333;
@@ -47,15 +65,16 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #333;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .product-title:hover {
   color: #007bff;
   cursor: pointer;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* Table Styling */
@@ -63,7 +82,9 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 table th,
@@ -72,16 +93,17 @@ table td {
   padding: 1rem;
   border: 1px solid #ddd;
   background: #fff;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 table th {
-  background: #f4f4f4;
+  background: linear-gradient(135deg, #f4f4f4 25%, #e2e2e2 100%);
   font-weight: 700;
 }
 
 table td:hover {
   background: #f8f8f8;
+  color: #007bff;
 }
 
 /* Review Section */
@@ -90,16 +112,22 @@ table td:hover {
   padding: 2rem;
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.review:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .review h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   background: #f4f4f4;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .review button {
@@ -111,11 +139,12 @@ table td:hover {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .review button:hover {
   background: #0056b3;
+  transform: scale(1.05);
 }
 
 /* Carousel Caption */
@@ -129,12 +158,13 @@ table td:hover {
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .carousel-caption:hover {
   background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-5px);
 }
