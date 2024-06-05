@@ -1,7 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import "./Product.css"; // Import a CSS file for custom styles
-
+import "./Product.css";
 const Product = ({ product }) => {
   return (
     <Card className="my-3 p-3 rounded product-card">
