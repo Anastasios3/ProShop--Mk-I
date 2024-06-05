@@ -1,21 +1,24 @@
+import React from "react";
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import "./Product.css"; // Import a CSS file for custom styles
 
 const Product = ({ product }) => {
   return (
-    <Card className="my-3 p-3 rounded">
-      <Link to={`/Product/${product._id}`}>
-        <Card.Img src={product.image} variant="top" />
-      </Link>
+    <Card className="my-3 p-3 rounded product-card">
+      <a href={`/Product/${product._id}`}>
+        <Card.Img src={product.image} variant="top" className="product-image" />
+      </a>
 
       <Card.Body>
-        <Link to={`/Product/${product._id}`}>
-          <Card.Title as="div">
+        <a href={`/Product/${product._id}`}>
+          <Card.Title as="div" className="product-title">
             <strong>{product.name}</strong>
           </Card.Title>
-        </Link>
+        </a>
 
-        <Card.Text as="h3">${product.price}</Card.Text>
+        <Card.Text as="h3" className="product-price">
+          ${product.price}
+        </Card.Text>
       </Card.Body>
     </Card>
   );
