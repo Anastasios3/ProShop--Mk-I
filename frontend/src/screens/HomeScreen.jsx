@@ -19,3 +19,5 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+// Path: frontend/src/screens/HomeScreen.jsx

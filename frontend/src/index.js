@@ -31,3 +31,5 @@ root.render(
 );
 
 reportWebVitals();
+
+// Path: frontend/src/index.js

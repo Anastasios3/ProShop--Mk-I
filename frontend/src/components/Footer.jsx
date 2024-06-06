@@ -18,3 +18,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// Path: frontend/src/components/Header.jsx

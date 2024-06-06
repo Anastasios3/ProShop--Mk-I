@@ -34,3 +34,5 @@ const Product = ({ product }) => {
 };
 
 export default Product;
+
+// Path: frontend/src/components/Product.jsx

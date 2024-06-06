@@ -13,3 +13,5 @@ const ProductScreen = () => {
   );
 };
 export default ProductScreen;
+
+// Path: frontend/src/screens/ProductScreen.jsx
