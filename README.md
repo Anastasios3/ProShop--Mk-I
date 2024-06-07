@@ -16,15 +16,79 @@ The frontend is built with React and displays the product data fetched from the 
 
 ## Usage
 
+### Starting the Backend Server
+
 To start the backend server, navigate to the root directory and run the following command in the terminal:
 
 ```bash
-node server.js
+npm run server
+```
+
+### Starting the Frontend Application
 
 To start the frontend application, navigate to the frontend directory and run the following command in the terminal:
 
-Dependencies
-React
-Express.js
-Bootstrap
-dotenv
+```bash
+npm start --prefix frontend
+```
+
+Alternatively, you can start both the backend and frontend servers concurrently from the root directory using:
+
+```bash
+npm start
+```
+
+## Dependencies
+
+- React
+- Express.js
+- Bootstrap
+- dotenv
+- axios
+- react-router-dom
+- concurrently
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Anastasios3/proshop-demo.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd proshop-v2
+   ```
+
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Navigate to the `frontend` directory and install frontend dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+5. Start the application:
+   ```bash
+   npm start
+   ```
+
+## .env File
+
+Create a `.env` file in the root directory and add the following environment variables:
+
+```
+PORT=5000
+NODE_ENV=development
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+This README file provides clear and concise instructions on setting up and running your e-commerce application.
