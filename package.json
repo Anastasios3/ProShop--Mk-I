@@ -8,7 +8,7 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "node backend/server.js"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Anastasios3/proshop-demo#readme",
   "devDependencies": {
-    "concurrently": "^6.2.1"
+    "concurrently": "^6.5.1"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
