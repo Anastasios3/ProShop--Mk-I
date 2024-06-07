@@ -21,5 +21,8 @@
   "homepage": "https://github.com/Anastasios3/proshop-demo#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
