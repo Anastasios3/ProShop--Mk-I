@@ -1,10 +1,13 @@
 {
   "name": "proshop-v2",
   "version": "1.0.0",
-  "description": "eCommerce application bult with M.E.R.N. stack",
+  "description": "eCommerce application built with M.E.R.N. stack",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node backend/server.js",
+    "client": "npm start --prefix frontend"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Anastasios3/proshop-demo/issues"
   },
-  "homepage": "https://github.com/Anastasios3/proshop-demo#readme"
+  "homepage": "https://github.com/Anastasios3/proshop-demo#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
 }
