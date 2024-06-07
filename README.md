@@ -1,26 +1,30 @@
-# Frontend for E-commerce Application
+# E-commerce Application
 
-This repository contains the frontend code for an e-commerce application. The application is built using React and Bootstrap for styling.
+This repository contains the code for a full-stack e-commerce application. The application is built using React for the frontend, Express.js for the backend, and Bootstrap for styling.
 
 ## Description
 
-The application consists of several components including a product list, product card, and a carousel for displaying featured products. The CSS styling for these components is contained in the `index.css` file.
+The application consists of several components including a product list, product card, and a carousel for displaying featured products. The backend serves the product data to the frontend via a RESTful API.
 
-### Product Card
+### Backend
 
-The `Product` component displays information about a single product. It includes the product's image, name, and price. The product's name and image are clickable and redirect to a detailed view of the product.
+The backend is built with Express.js and serves product data from the `data/products.js` file. It includes routes for fetching all products and a single product by its ID.
 
-### Carousel
+### Frontend
 
-The `Carousel` component displays a rotating selection of featured products. Each slide in the carousel includes an image of the product and a caption with the product's name and price.
-
-### Reviews
-
-The application also includes a `Review` component where users can submit reviews for products. The review form includes a button styled with a hover effect.
+The frontend is built with React and displays the product data fetched from the backend. It includes components for displaying a list of products, individual product cards, and a carousel for featured products.
 
 ## Usage
 
-To start the application, run the following command in the terminal:
+To start the backend server, navigate to the root directory and run the following command in the terminal:
 
 ```bash
-npm start
+node server.js
+
+To start the frontend application, navigate to the frontend directory and run the following command in the terminal:
+
+Dependencies
+React
+Express.js
+Bootstrap
+dotenv
