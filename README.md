@@ -91,4 +91,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-This README file provides clear and concise instructions on setting up and running your e-commerce application.
