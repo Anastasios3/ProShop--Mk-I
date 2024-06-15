@@ -23,3 +23,5 @@ const getProductById = asyncHandler(async (req, res) => {
 });
 
 export { getProducts, getProductById };
+
+//path: backend/models/productModel.js

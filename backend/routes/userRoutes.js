@@ -19,3 +19,5 @@ router.route("/profile").get(getUserProfile).put(updateUserProfile);
 router.route("/:id").get(getUserById).put(updateUser).delete(deleteUser);
 
 export default router;
+
+//path: backend/routes/productRoutes.js

@@ -76,3 +76,5 @@ export {
   getUserById,
   updateUser,
 };
+
+//path: backend/models/userModel.js
