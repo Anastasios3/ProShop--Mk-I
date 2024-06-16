@@ -15,6 +15,7 @@ const app = express();
 
 // Middleware for JSON body parsing
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Product routes
 app.use("/api/products", productRoutes);
